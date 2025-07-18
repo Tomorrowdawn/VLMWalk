@@ -23,14 +23,23 @@ docker run --rm -d -p host_port:container_port -v host_addr:container_port --nam
 ```
 
 `host`: Your machine.
+
 `container`: The jargon for "VM".
+
 `Image`: A snapshot of a machine. Think of it as a class definition, and a container as an instance of that class. Yes, exactly - we instantiate an image and call it a container.
+
 `docker run`: Launch the image.
+
     `--rm`: remove the container if it shut down. Some old-school users may argue "it's important to preserve the crash dump for debugging", but I've only found that leaving containers around makes my next startup a headache.
+
     `-d`: run as daemon (in background). Don't add this at your first launch because you might need to see the full logs when things go wrong.
+
     `-p host_port:container_port`: port mapping. Your app runs inside the container, but you access it from your host machine.
+
     `-v host_path:container_path`: volume mounting. Think of it as creating a shared folder between your host and the container. Docker likes to put host in the front.
+
     `--name container_name`: give your container a name. Otherwise Docker will generate something like "sleepy_galileo" for you.
+
     `-e KEY=value`: set environment variables. The container's equivalent of "export KEY=value". 
 
 
