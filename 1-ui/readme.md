@@ -14,7 +14,7 @@ Many (including one-day-ago me) are not familiar with modern development toolkit
 
 [Docker](https://www.docker.com/) is a lightweight containerization platform that allows you to package applications and their dependencies into isolated environments, ensuring consistency across different systems. You could think it as a VM, if details are not your concerns. For readers in China, I would recommend this [manual](https://yeasy.gitbook.io/docker_practice/install/ubuntu).
 
-The only trouble I encountered is that installing docker requires root previlidge. Consult with your admins in advance.
+The only trouble I encountered is that installing docker requires root privilege. Consult with your admins in advance.
 
 You don't need to be a docker geek. Here is a simple yet effective guide:
 
@@ -49,7 +49,7 @@ I guess you may complain where can I get an image, so here it goes:
 docker pull NAME[:TAG|@DIGEST]
 ```
 
-Just a reminder: docker would store the images under /var/lib/docker/. Keep your disk from running out.
+Just a reminder: docker would store the images under /var/lib/docker/. Keep your disk memory from running out.
 
 ## Usage
 
